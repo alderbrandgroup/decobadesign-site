@@ -41,7 +41,9 @@ a{text-decoration:none;color:inherit}
 .inner{position:relative;z-index:2;width:100%;max-width:760px;padding:34px 22px 40px;text-align:center;
   display:flex;flex-direction:column;align-items:center;gap:16px}
 
-.logo{width:132px;height:auto;filter:brightness(0) invert(1);opacity:.95}
+.logo-plate{background:var(--cream);padding:13px 20px;border-radius:6px;display:inline-block;line-height:0;
+  box-shadow:0 8px 26px rgba(0,0,0,.28)}
+.logo{width:136px;height:auto}
 
 .badge-top{display:inline-block;background:rgba(201,112,76,.16);border:1px solid rgba(201,112,76,.5);color:var(--brand);
   font-weight:700;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:100px}
@@ -80,9 +82,9 @@ h1 .accent{color:var(--brand)}
 <main class="hero">
   <div class="bg"><img src="visuel.jpg" alt="Intérieur conçu par DECOBA Design" /></div>
   <div class="inner">
-    <img class="logo" src="logo.png" alt="DECOBA design" width="132" />
-    <span class="badge-top">Formation 100 % en ligne</span>
-    <h1>Deviens <span class="accent">designer<br>d'intérieur</span></h1>
+    <span class="logo-plate"><img class="logo" src="logo.png" alt="DECOBA design" width="136" /></span>
+    <span class="badge-top">100 % en ligne · Ouvert à tous</span>
+    <h1>Formation en<br><span class="accent">design d'intérieur</span></h1>
     <p class="sub">Les bases du design, les logiciels pros et l'IA appliquée. Ouvert à tous, même débutant.</p>
     <ul class="points">
       <li><span class="ck">✓</span> Les bases du design</li>
