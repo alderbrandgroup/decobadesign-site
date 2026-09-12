@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Atelier Design d'Intérieur 3 mois — Choisis ta formule | DECOBA Design</title>
+<meta name="description" content="Atelier design d'intérieur 3 mois : formule échelonnée dès 48 500 F CFA ou accès complet à 140 000 F CFA. Paiement sécurisé, accès immédiat." />
+<link rel="icon" type="image/png" href="../img/logo-officiel.png" />
+<meta name="theme-color" content="#0E0C0B" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Atelier Design d'Intérieur 3 mois — DECOBA Design" />
+<meta property="og:description" content="Maîtrise l'aménagement intérieur, le design d'espace et l'IA appliquée. Choisis ta formule." />
+<meta property="og:image" content="https://decobadesign.com/atelier/visuel.jpg" />
+<meta property="og:url" content="https://decobadesign.com/atelier" />
+<meta property="og:locale" content="fr_FR" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#C9704C; --brand-dark:#B05E3D;
+  --ink:#0E0C0B; --cream:#F7F4EF; --dim:#C9C0B6; --ok:#25D366;
+  --font:"Manrope",Arial,sans-serif; --bar:72px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--ink)}
+body{font-family:var(--font);color:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.5}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+.topbar{background:var(--cream);display:flex;align-items:center;justify-content:center;padding:10px 20px;height:var(--bar)}
+.logo{width:104px;height:auto}
+
+.page{position:relative;min-height:calc(100vh - var(--bar));min-height:calc(100svh - var(--bar));
+  display:flex;align-items:center;justify-content:center;overflow:hidden;padding:30px 18px 40px}
+.bg{position:absolute;inset:0;z-index:0}
+.bg img{width:100%;height:100%;object-fit:cover}
+.page::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,12,11,.9),rgba(14,12,11,.82) 40%,rgba(14,12,11,.96))}
+
+.inner{position:relative;z-index:2;width:100%;max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+
+.badge-top{display:inline-block;background:rgba(201,112,76,.16);border:1px solid rgba(201,112,76,.5);color:var(--brand);
+  font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:100px}
+h1{font-weight:800;font-size:clamp(1.95rem,6vw,3.3rem);line-height:1.04;letter-spacing:-.025em;text-transform:uppercase}
+h1 .accent{color:var(--brand)}
+.sub{font-size:clamp(.95rem,2.2vw,1.1rem);color:var(--dim);max-width:52ch;font-weight:500}
+
+.plans{display:grid;grid-template-columns:1fr;gap:14px;width:100%;margin-top:8px}
+.plan{position:relative;background:rgba(255,255,255,.055);border:1px solid rgba(247,244,239,.16);border-radius:12px;
+  padding:24px 20px;text-align:left;display:flex;flex-direction:column;gap:12px}
+.plan.best{border-color:var(--brand);background:rgba(201,112,76,.1)}
+.plan .tag{position:absolute;top:-11px;left:20px;background:var(--brand);color:#fff;font-weight:800;font-size:.65rem;
+  letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+.plan h2{font-size:1.06rem;font-weight:800;letter-spacing:-.01em}
+.plan .desc{font-size:.88rem;color:var(--dim);font-weight:500}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .old{font-size:1rem;color:#8C837A;text-decoration:line-through;font-weight:600}
+.price .now{font-size:clamp(1.6rem,5vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+.price .cur{font-size:.9rem;font-weight:700;color:var(--dim)}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.plan li{display:flex;gap:9px;font-size:.88rem;font-weight:600}
+.plan li .ck{color:var(--ok);font-weight:800;flex:none}
+
+.buy{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin-top:4px;
+  font-weight:800;font-size:1rem;padding:16px 20px;border-radius:10px;transition:transform .25s ease,background .25s ease}
+.buy.primary{background:var(--brand);color:#fff;box-shadow:0 12px 30px rgba(201,112,76,.34)}
+.buy.primary:hover{background:var(--brand-dark);transform:translateY(-2px)}
+.buy.ghost{background:transparent;color:var(--cream);border:1px solid rgba(247,244,239,.38)}
+.buy.ghost:hover{background:rgba(247,244,239,.09);transform:translateY(-2px)}
+
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:.8rem;color:var(--dim);font-weight:600;margin-top:8px}
+.note{font-size:.78rem;color:#8C837A;font-weight:500}
+
+@media(min-width:820px){
+  :root{--bar:88px}
+  .logo{width:132px}
+  .plans{grid-template-columns:1fr 1fr;gap:18px}
+  .plan{padding:28px 24px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <img class="logo" src="logo.png" alt="DECOBA design" width="132" />
+</header>
+
+<main class="page">
+  <div class="bg"><img src="visuel.jpg" alt="Intérieur conçu par DECOBA Design" /></div>
+  <div class="inner">
+    <span class="badge-top">Tarif promotionnel en cours</span>
+    <h1>Choisis ta <span class="accent">formule</span></h1>
+    <p class="sub">Atelier pratique pour maîtriser l'aménagement intérieur, le design d'espace et créer des projets esthétiques et professionnels.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <h2>Formule échelonnée</h2>
+        <div class="desc">Inscription + livret, puis paiement en plusieurs fois.</div>
+        <div class="price">
+          <span class="old">100 000</span>
+          <span class="now">48 500</span>
+          <span class="cur">F CFA</span>
+        </div>
+        <ul>
+          <li><span class="ck">&#10003;</span> Accès à l'atelier 3 mois</li>
+          <li><span class="ck">&#10003;</span> Inscription + livret inclus</li>
+          <li><span class="ck">&#10003;</span> Étale ton paiement</li>
+        </ul>
+        <a class="buy ghost" href="https://lxxtdsbe.mychariow.shop/prd_5wy0dn" target="_blank" rel="noopener">Choisir cette formule</a>
+      </div>
+
+      <div class="plan best">
+        <span class="tag">Recommandé</span>
+        <h2>Accès complet — 3 mois</h2>
+        <div class="desc">Tout l'atelier réglé en une fois. Pro &amp; Esthétique.</div>
+        <div class="price">
+          <span class="old">300 000</span>
+          <span class="now">140 000</span>
+          <span class="cur">F CFA</span>
+        </div>
+        <ul>
+          <li><span class="ck">&#10003;</span> Accès complet aux 3 mois</li>
+          <li><span class="ck">&#10003;</span> Tout le programme inclus</li>
+          <li><span class="ck">&#10003;</span> Aucun paiement à suivre</li>
+        </ul>
+        <a class="buy primary" href="https://lxxtdsbe.mychariow.shop/prd_hdjo1p" target="_blank" rel="noopener">Choisir cette formule</a>
+      </div>
+    </div>
+
+    <div class="trust">
+      <span>&#128274; Paiement sécurisé</span>
+      <span>&#9889; Accès immédiat</span>
+      <span>&#128172; Support WhatsApp</span>
+    </div>
+    <div class="note">Paiement traité par Chariow · Mobile Money &amp; carte bancaire acceptés.</div>
+  </div>
+</main>
+</body>
+</html>
