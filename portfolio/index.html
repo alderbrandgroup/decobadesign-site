@@ -290,17 +290,6 @@ body.toc-open .burg::after{top:3.75px;transform:rotate(-45deg)}
 .mat-list i{width:28px;height:14px;background:var(--c);flex:none}
 .mat-txt .note{margin-top:auto;padding-top:40px}
 
-/* Crédits */
-.cred{display:grid;grid-template-columns:1fr 1.12fr;gap:clamp(32px,5vw,80px);align-items:start}
-.cred h3.t{font-size:clamp(1.8rem,2.6vw,2.3rem);margin-bottom:22px}
-.cred p{font-size:1rem;line-height:1.75;max-width:52ch}
-.cred p + p{margin-top:18px}
-.cred p.sm{font-size:.9rem;color:var(--taupe)}
-.cred-list{list-style:none;margin:34px 0 26px;border-top:1px solid var(--rule)}
-.cred-list li{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule);font-size:.9rem}
-.cred-list b{font-weight:600}
-.cred-list span{color:var(--taupe)}
-
 /* Contact */
 .ct{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1fr);min-height:100vh;min-height:100svh}
 .ct-txt{padding:clamp(48px,10vh,120px) var(--pad) clamp(36px,6vh,64px);display:flex;flex-direction:column}
@@ -407,7 +396,7 @@ body.toc-open .toc-foot{transition-delay:.2s}
   .cv0-img{height:auto;aspect-ratio:4/3.2}
   .cv0-meta{grid-template-columns:1fr;gap:20px}
   .lv{grid-template-columns:1fr 1fr}
-  .g-palmes,.g-coupe,.g-2,.g-sauge,.g-cuisine,.g-terre,.cred{grid-template-columns:1fr}
+  .g-palmes,.g-coupe,.g-2,.g-sauge,.g-cuisine,.g-terre{grid-template-columns:1fr}
   .notes,.g-cuisine .eq{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:28px}
   .g-2.div > *:last-child{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:34px}
   .g-2{row-gap:48px}
@@ -424,7 +413,6 @@ body.toc-open .toc-foot{transition-delay:.2s}
   .lv{gap:30px 16px}
   .eq-row{grid-template-columns:96px 1fr;gap:16px}
   .g-4{gap:34px 16px}
-  .cred-list li{grid-template-columns:1fr;gap:2px}
   .btn{width:100%}
   .lb-nav{display:none}
   .pf-foot .wrap{flex-direction:column}
@@ -482,7 +470,7 @@ body.toc-open .toc-foot{transition-delay:.2s}
       <a href="#terre">Terre d’Eau<b>13</b></a>
     </div>
     <div class="toc-foot">
-      <a href="#couverture">Couverture</a><a href="#matieres">Matières</a><a href="#credits">Crédits</a><a href="#contact">Contact</a><a href="/">decobadesign.com</a>
+      <a href="#couverture">Couverture</a><a href="#matieres">Matières</a><a href="#contact">Contact</a><a href="/">decobadesign.com</a>
     </div>
   </div>
 </nav>
@@ -975,32 +963,6 @@ body.toc-open .toc-foot{transition-delay:.2s}
       <li class="rv"><i style="--c:#DFD8C8"></i>Lin écru</li>
     </ul>
     <p class="note rv">Composition de matières créée avec l’IA</p>
-  </div>
-</section>
-
-<!-- ============ CRÉDITS ============ -->
-<section class="pg" id="credits" data-now="Crédits">
-  <div class="wrap">
-    <header class="sh-head"><p class="k rv">Colophon</p><h3 class="t rv" style="font-size:clamp(2rem,3.7vw,3.2rem)">Crédits iconographiques</h3><span class="rule"></span></header>
-    <div class="cred">
-      <div>
-        <h3 class="t rv">Projets DECOBA Design</h3>
-        <p class="rv">Les cinq intérieurs reprennent les vues conservées par le studio. Nacre, Cannelle, Ambre, Graphite et Cacao sont les noms éditoriaux de cette sélection.</p>
-        <p class="rv">Les deux projets d’architecture reprennent les planches du portfolio DECOBA Design. Les perspectives sont des interprétations produites avec ChatGPT Images.</p>
-        <p class="sm rv">Les quatre plans du logement ont été isolés de leur fond photographique. Le plan du site et les six niveaux de la polyclinique reprennent les dessins d’origine en monochrome.</p>
-      </div>
-      <div>
-        <h3 class="t rv">Études de conception</h3>
-        <p class="rv">Les six études sont des propositions fictives. Les vues d’ambiance et dessins de présentation ont été interprétés avec ChatGPT Images à partir des références transmises.</p>
-        <ul class="cred-list">
-          <li class="rv"><b>Coupes et escalier</b><span>CTMK<span class="sl">/</span>stmk.pro</span></li>
-          <li class="rv"><b>Cuisine et menuiserie</b><span>João Gabriel<span class="sl">/</span>Casa João e Gal</span></li>
-          <li class="rv"><b>Cuisine et séjour</b><span>SOUL ROOM<span class="sl">/</span>interior.soulroom</span></li>
-          <li class="rv"><b>Développés intérieurs</b><span>Compte @_interior_documentation</span></li>
-        </ul>
-        <p class="sm rv">Ces crédits reprennent les signatures visibles sur les références fournies. Les dessins du carnet illustrent les intentions spatiales et les choix de matière.</p>
-      </div>
-    </div>
   </div>
 </section>
 
