@@ -154,6 +154,38 @@ body.toc-open .burg::after{top:3.75px;transform:rotate(-45deg)}
 .dark .rule{background:var(--rule-dark)}
 .dark .t{color:var(--white)}
 
+/* Visite virtuelle (le lecteur YouTube ne se charge qu'au clic) */
+.vt-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:4vw;align-items:end;margin-bottom:clamp(30px,6vh,64px)}
+.vt-head .k{margin-bottom:14px}
+.vt-head .lead{justify-self:end;color:var(--on-dark-2)}
+.vt-frame{position:relative;aspect-ratio:16/9;background:#1E1D1A;overflow:hidden}
+.vt-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vt-play{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:pointer;color:#fff}
+.vt-play img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.8s var(--ease)}
+.vt-play::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,0) 45%,rgba(20,19,17,.5))}
+.vt-play:hover img{transform:scale(1.06)}
+.vt-btn{position:absolute;z-index:2;left:50%;top:50%;width:clamp(72px,7.4vw,100px);height:clamp(72px,7.4vw,100px);transform:translate(-50%,-50%);border-radius:50%;
+  border:1px solid rgba(255,255,255,.75);background:rgba(33,31,28,.32);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;transition:background .45s,border-color .45s,transform .7s var(--ease)}
+.vt-btn::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(255,255,255,.55);animation:vtpulse 2.8s var(--ease) infinite}
+@keyframes vtpulse{0%{transform:scale(1);opacity:.85}100%{transform:scale(1.6);opacity:0}}
+.vt-btn svg{width:26%;height:26%;margin-left:7%;fill:currentColor}
+.vt-play:hover .vt-btn,.vt-play:focus-visible .vt-btn{background:var(--rust);border-color:var(--rust);transform:translate(-50%,-50%) scale(1.06)}
+.vt-cue{position:absolute;z-index:2;left:clamp(18px,2.4vw,34px);bottom:clamp(16px,2.4vw,30px);font:600 .66rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.vt-foot{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.js .vt-frame{clip-path:inset(100% 0 0 0);transition:clip-path 1.5s var(--ease-io)}
+.js .vt-frame .vt-play img{transform:scale(1.14);transition:transform 2s var(--ease)}
+.js .vt-frame.in{clip-path:inset(0 0 0 0)}
+.js .vt-frame.in .vt-play img{transform:scale(1.02);transition:transform 1.8s var(--ease)}
+.js .vt-frame.in .vt-play:hover img{transform:scale(1.06)}
+@media (max-width:900px){
+  .vt-head{grid-template-columns:1fr;gap:20px}
+  .vt-head .lead{justify-self:start}
+}
+@media (max-width:640px){
+  .vt-foot{flex-direction:column;align-items:flex-start;gap:6px}
+}
+
 /* Sommaire */
 .somm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:7vh}
 .somm-head .k{margin-bottom:14px}
@@ -422,6 +454,9 @@ body.toc-open .toc-foot{transition-delay:.2s}
   .js .rv,.js .dw,.js .ph:not(.cv),.js .cover .ph,.js .cover .ln>span,.js .cover-side,.js .cover-foot,.js .cover-cue,.js .rule,.js .cover-rule,.js .sw i,.js .pt,.js .pl{
     opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
   .js .ph img,.js .cover .ph img{transform:none!important;transition:none!important}
+  .js .vt-frame{clip-path:none!important;transition:none!important}
+  .js .vt-frame .vt-play img{transform:none!important;transition:none!important}
+  .vt-btn::before{animation:none}
   .cover-cue i{animation:none}
 }
 @media print{
@@ -470,7 +505,7 @@ body.toc-open .toc-foot{transition-delay:.2s}
       <a href="#terre">Terre d’Eau<b>13</b></a>
     </div>
     <div class="toc-foot">
-      <a href="#couverture">Couverture</a><a href="#matieres">Matières</a><a href="#contact">Contact</a><a href="/">decobadesign.com</a>
+      <a href="#couverture">Couverture</a><a href="#visite">Visite virtuelle</a><a href="#matieres">Matières</a><a href="#contact">Contact</a><a href="/">decobadesign.com</a>
     </div>
   </div>
 </nav>
@@ -491,7 +526,27 @@ body.toc-open .toc-foot{transition-delay:.2s}
       </div>
       <figcaption class="cover-foot"><span>Villa des Palmes<span class="sl">/</span>Étude du séjour</span><span class="k">Dakar<span class="sl">/</span>Novembre 2026</span></figcaption>
     </figure>
-    <a class="cover-cue" href="#sommaire"><i></i>Découvrir</a>
+    <a class="cover-cue" href="#visite"><i></i>Découvrir</a>
+  </div>
+</section>
+
+<!-- ============ VISITE VIRTUELLE ============ -->
+<section class="pg dark" id="visite" data-now="Visite virtuelle">
+  <div class="wrap">
+    <div class="vt-head">
+      <div><p class="k rv">Visite virtuelle</p><h2 class="t rv">Entrer dans la villa</h2></div>
+      <p class="lead rv">Une villa conçue par DECOBA Design, à parcourir en mouvement : les volumes, la lumière et les matières se lisent comme sur place.</p>
+    </div>
+    <figure>
+      <div class="vt-frame" id="vtFrame">
+        <button class="vt-play" id="vtPlay" type="button" aria-label="Lancer la visite virtuelle de la villa">
+          <img src="/portfolio/img/visite-1177.jpg" srcset="/portfolio/img/visite-768.jpg 768w, /portfolio/img/visite-1177.jpg 1177w" sizes="(max-width:1320px) 100vw, 1320px" width="1177" height="662" alt="Villa 3D, façade au début de la visite" loading="lazy" decoding="async">
+          <span class="vt-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.8v16.4L20 12z"/></svg></span>
+          <span class="vt-cue" aria-hidden="true">Lancer la visite</span>
+        </button>
+      </div>
+      <figcaption class="vt-foot rv"><span>Villa 3D<span class="sl">/</span>Visite immersive</span><span class="k">Film 3D</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -1019,7 +1074,7 @@ body.toc-open .toc-foot{transition-delay:.2s}
   setTimeout(function(){ b.classList.add('ready'); },300);
 
   /* ---- Apparitions au défilement (échelonnées) ---- */
-  var targets=[].slice.call(d.querySelectorAll('.rv,.ph:not(.cv),.dw,.rule:not(.cover-rule),.sw'));
+  var targets=[].slice.call(d.querySelectorAll('.rv,.ph:not(.cv),.dw,.rule:not(.cover-rule),.sw,.vt-frame'));
   if('IntersectionObserver' in window && !reduce){
     /* Une image entièrement masquée (clip-path) ou un filet à largeur nulle (scaleX 0) n'est jamais
        « visible » pour l'observateur : on observe alors son parent. */
@@ -1036,7 +1091,7 @@ body.toc-open .toc-foot{transition-delay:.2s}
       });
     },{rootMargin:'0px 0px -7% 0px',threshold:0});
     targets.forEach(function(el){
-      var key=(el.classList.contains('ph')||el.classList.contains('rule'))?el.parentElement:el;
+      var key=(el.classList.contains('ph')||el.classList.contains('rule')||el.classList.contains('vt-frame'))?el.parentElement:el;
       if(!groups.has(key)){ groups.set(key,[]); io.observe(key); }
       groups.get(key).push(el);
     });
@@ -1108,6 +1163,21 @@ body.toc-open .toc-foot{transition-delay:.2s}
     if(navigator.share){ navigator.share(data).catch(function(){}); return; }
     copy(URL_PORTFOLIO).then(function(){ say('Lien du portfolio copié'); },function(){ say(URL_PORTFOLIO); });
   });
+
+  /* ---- Visite virtuelle : le lecteur YouTube ne se charge qu'au clic ---- */
+  var vtPlay=$('vtPlay');
+  if(vtPlay){
+    vtPlay.addEventListener('click',function(){
+      var f=d.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/lpULxCOm1no?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+      f.title='Visite virtuelle — Villa 3D, DECOBA Design';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');
+      f.setAttribute('allowfullscreen','');
+      f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      vtPlay.parentNode.replaceChild(f,vtPlay);
+      f.focus();
+    });
+  }
 
   /* ---- Visionneuse ---- */
   var items=[].slice.call(d.querySelectorAll('[data-zoom]'));
